@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สุ่มด่าเพื่อนตอนเล่นเกม</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>สุ่มประโยคด่าเพื่อนตอนเล่นเกม 🎮</h1>
+
+    <!-- เลือกภาษา -->
+    <label for="language">🌍 เลือกภาษา:</label>
+    <select id="language" onchange="changeLanguage()">
+      <option value="th">ภาษาไทย 🇹🇭</option>
+      <option value="en">English 🇬🇧</option>
+      <option value="jp">日本語 🇯🇵</option>
+      <option value="kr">한국어 🇰🇷</option>
+      <option value="zh">中文 🇨🇳</option>
+      <option value="hi">हिन्दी 🇮🇳</option>
+      <option value="ru">Русский 🇷🇺</option>
+    </select>
+
+    <!-- เลือกแนว -->
+    <label for="tone">🎭 เลือกแนว:</label>
+    <select id="tone">
+      <option value="funny">🤣 ตลก</option>
+      <option value="angry">😡 ดุ/แรง</option>
+      <option value="sarcastic">🙄 ประชด</option>
+      <option value="polite">🙂 สุภาพ</option>
+    </select>
+
+    <!-- อีโมจิ -->
+    <p id="emoji" class="emoji">🤔</p>
+
+    <!-- ข้อความด่า -->
+    <p id="quote" class="quote">กดปุ่มเพื่อสุ่มประโยคแซวเพื่อน!</p>
+
+    <!-- ปุ่มสุ่ม -->
+    <button onclick="generateQuote()">🔥 สุ่มประโยคด่า</button>
+
+    <!-- เสียงคลิก -->
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
